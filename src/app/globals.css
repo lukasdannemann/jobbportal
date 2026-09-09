@@ -1,1 +1,24 @@
-@import 'https://a.storyblok.com/f/212319/x/e6ccda03b8/blueprint-blank.css';
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+	--color-brand: #4338ca;
+	--color-brand-hover: #3730a3;
+	--color-brand-soft: #eef2ff;
+	--color-accent: #ea580c;
+
+	--color-ink: #111827;
+	--color-muted: #4b5563;
+	--color-line: #e5e7eb;
+	--color-canvas: #f9fafb;
+}
+
+@layer base {
+	body {
+		@apply bg-canvas text-ink antialiased;
+	}
+
+	:focus-visible {
+		@apply outline-2 outline-offset-2 outline-brand;
+	}
+}
