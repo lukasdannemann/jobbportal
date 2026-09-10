@@ -15,8 +15,16 @@
 
 @layer base {
 	body {
-		@apply bg-canvas text-ink antialiased;
+		@apply bg-canvas text-ink antialiased font-mono;
 	}
+
+    h1 {
+        @apply  font-sans text-xl font-semibold tracking-tight text-ink;
+    }
+
+    footer {
+        @apply text-sm text-muted font-sans;
+    }
 
 	:focus-visible {
 		@apply outline-2 outline-offset-2 outline-brand;

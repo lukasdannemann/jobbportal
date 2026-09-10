@@ -10,8 +10,8 @@ export default function Header({ blok }) {
 		>
 			<div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
 				{blok.heading && (
-					<h1 className="text-xl font-semibold tracking-tight">
-						<Link href="/" className="hover:text-neutral-600 transition-colors ">
+					<h1 className="text-xl text-ink font-semibold tracking-tight">
+						<Link href="/" className="hover:text-brand-hover transition-colors ">
 							{blok.heading}
 						</Link>
 					</h1>

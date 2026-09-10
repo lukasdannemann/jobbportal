@@ -2,7 +2,9 @@ import { getStoryblokApi } from "@/lib/storyblok";
 import { StoryblokStory } from "@storyblok/react/rsc";
 import { notFound } from "next/navigation";
 
-export default async function JobIndexPage() {
+export default async function JobIndexPage({ searchParams }) {
+  const { q, department } = await searchParams
+  const query = q || "";
   const storyblokApi = getStoryblokApi();
 
   let story;
@@ -16,5 +18,5 @@ export default async function JobIndexPage() {
     throw error;
   }
 
-  return <StoryblokStory story={story} />;
+  return <StoryblokStory story={story} query={query || ""} department={department} />;
 }
